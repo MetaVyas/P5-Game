@@ -84,21 +84,38 @@ function draw(){
 textSize(60);
 if(score>=3){
     fill(random(0,255),random(0,255),random(0,255));
+if(p1Speed>0){
+p1Speed--;} 
+p2Speed++;
+ballxSpeed++;
+ballySpeed++;
 }
 else if(score==1){
 fill(0,255,0);
-}
+p1Speed --; 
+p2Speed = 4;
+ballxSpeed++;
+ballySpeed++;}
 else if(score==2){
 fill(255,0,0);
+p1Speed --; 
+p2Speed = 6;
+ballxSpeed=3;
+ballySpeed=3;
 }
 else{
+p1Speed = 10; 
+p2Speed = 3;
+ballxSpeed=3;
+ballySpeed=3;
     fill(0,0,255);}
 text('SCORE = ' + score, 150, 675);
-
 }
+
 function mouseClicked(){
     score++;
 }
+
 // if (ballYPos > p2YPos && ){
 
 // }
