@@ -63,24 +63,30 @@ function draw(){
  
    if (keyIsDown(UP_ARROW)) {
        if(p1YPos>25){
-        p1YPos -= 3;}
+        p1YPos -= p1Speed;}
     }
- 
     if (keyIsDown(DOWN_ARROW)) {
         if(p1YPos<575){
-       p1YPos += 3;}}
-
+       p1YPos += p1Speed;}
+    }
     if (keyIsDown(LEFT_ARROW)) {
         if(p1XPos>15){
-        p1XPos -= 3;}
+        p1XPos -= p1Speed;}
       }
-    
     if (keyIsDown(RIGHT_ARROW)) {
         if(p1XPos<298-18){
-        p1XPos += 3;}
+        p1XPos += p1Speed;}
        }
 
-    
+    if(ballYPos>p2YPos){
+        if(p2YPos<575){
+        p2YPos += p2Speed;}
+    }
+    if(ballYPos<p2YPos){
+        if(p2YPos<25){
+        p2YPos -= p2Speed;}
+    }
+
 textSize(60);
 if(score>=3){
     fill(random(0,255),random(0,255),random(0,255));
